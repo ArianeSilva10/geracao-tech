@@ -1,0 +1,32 @@
+@font-face{
+    font-family: "PlaypenSans";
+    src: url("/fonts/PlaypenSans-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face{
+    font-family: "PlaypenSans";
+    src: url("/fonts/PlaypenSans-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face{
+    font-family: "PlaypenSans";
+    src: url("/fonts/PlaypenSans-SemiBold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+body{
+    font-family: PlaypenSans, sans-serif;
+}
+
+p{
+    color: blue;
+    font-size: 24px;
+    text-decoration: underline;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 350%;
+    text-align: justify;
+}

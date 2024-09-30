@@ -1,0 +1,26 @@
+p{
+    color: palevioletred !important;
+    background-color: aqua;
+}
+
+#paragrafo{
+    color: brown;
+    background-color: red;
+}
+
+#paragrafo{
+    color: cadetblue;
+}
+
+.paragrafo{
+    color: blueviolet;
+}
+
+p{
+    color: blue;
+    background-color: chartreuse !important;
+}
+
+p{
+    color: red;
+}

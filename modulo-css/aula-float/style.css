@@ -1,0 +1,21 @@
+main{
+    width: 1000px;
+    height: 600px;
+    background-color: brown;
+    padding: 40px;
+}
+
+section{
+    width: 600px;
+    height: 500px;
+    background-color: red;
+    padding: 30px;
+}
+
+div{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    float: right;
+    margin: 20px;
+}

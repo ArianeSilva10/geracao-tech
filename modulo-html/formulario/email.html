@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <div>
+            <label for="nome">Nome</label>
+            <input required minlength="6" maxlength="10" type="text" name="nome" id="nome">
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+        </div>
+        <div>
+            <fieldset>
+                <legend>Assunto</legend>
+                <label>
+                    <input required type="radio" name="assunto" id="compra" value="compra">Compra
+                </label>
+                <label>
+                    <input required type="radio" name="assunto" id="cotacao" value="cotacao">Cotacao
+                </label>
+            </fieldset>
+        </div>
+        <div>
+            <label for="">Mensagem</label>
+            <textarea name="Mensagem" id="mensagem"></textarea>
+        </div>
+        <div>
+            <input type="reset" value="Resetar">
+            <input type="submit" value="Enviar">
+        </div>
+    </form>
+</body>
+</html>
