@@ -1,0 +1,28 @@
+body{
+    background-color: tan;
+    padding-left: 30%;
+    margin: 0cm;
+}
+
+ul{
+    font-size: 1.5em;
+}
+
+.li-1{
+    color: darkblue;
+}
+
+.li-2{
+    color: darkcyan;
+}
+
+.li-3{
+    color: darkmagenta;
+}
+
+.bio{
+    background-color: lightcoral;
+    font-size: 20px;
+    display: inline-block;
+}
+
