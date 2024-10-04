@@ -1,0 +1,79 @@
+body{
+    font-family: "Mulish", sans-serif;
+    background-color: mediumorchid;
+}
+.titulo-header{
+    background-color: purple;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.header-d{
+    background-color: mediumorchid;
+    height: 126px;
+}
+
+.main{
+    height: 600px;
+    background-color: white;
+}
+
+.div-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo-main{
+    color: mediumvioletred;
+    border-bottom: 2px solid mediumvioletred;
+    padding-bottom: 15px;    
+}
+
+
+p{
+    width: 90%;
+    font-weight: bold;
+}
+
+.teams{
+    display: flex;
+    justify-content: space-around;
+    color: mediumvioletred;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.equipe{
+    color: mediumvioletred;
+    border-bottom: 2px solid mediumvioletred;
+    padding-bottom: 5px; 
+    margin-bottom: 2%; 
+}
+
+.div-equipe{
+    display: flex;
+    justify-content: center;
+}
+
+.circulo{
+        background: purple;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px; 
+        margin-bottom: 10%;   
+}
+
+.footer{
+    background-color: purple;
+    display: flex;
+    align-content: flex-end;
+    justify-content: center;
+    color: white;
+}
+
+hr{
+    margin-top: 2%;
+}
