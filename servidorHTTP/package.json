@@ -1,16 +1,15 @@
 {
-  "name": "backend-aula-1",
+  "name": "servidorhttp",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "server4.js",
   "scripts": {
-    "start": "node server.js",
+    "start" :"node server4.js",
     "test": "echo \"Error: no test specified\" && exit 1"
-
   },
   "keywords": [],
   "author": "Ariane",
   "license": "ISC",
-  "description": "",
+  "description": "Criacao de Servidor HTTP com Node.js",
   "devDependencies": {
     "nodemon": "^3.1.7"
   }
