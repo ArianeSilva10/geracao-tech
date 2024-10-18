@@ -1,0 +1,16 @@
+{
+  "name": "servidor-js",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Ariane",
+  "license": "ISC",
+  "description": "Servidor Node.js básico",
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
