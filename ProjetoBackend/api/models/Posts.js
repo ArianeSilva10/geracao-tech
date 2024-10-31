@@ -1,7 +1,27 @@
-const { DataTypes } = require('sequelize');
+// models/Post.js
+
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
 
-// Definindo o modelo Post
-const Post = sequelize.define('Post', {
-  // Definições dos campos do modelo
+class Post extends Model {}
+
+Post.init({
+  id: {
+    type: DataTypes.INTEGER,
+    primaryKey: true,
+    autoIncrement: true
+  },
+  title: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  content: {
+    type: DataTypes.TEXT,
+    allowNull: false
+  }
+}, {
+  sequelize,
+  modelName: 'Post'
 });
+
+module.exports = Post;

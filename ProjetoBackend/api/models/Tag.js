@@ -1,20 +1,23 @@
-const { DataTypes, Model } = require('sequelize');
-const sequelize = require('../config/database'); // Importa  a conexão com o banco de dados
+// models/Tag.js
 
-// Definindo a classe Tag que estende Model
-class Tag extends Model{}
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/database');
 
-// Inicializando a classe Tag com suas colunas e configurações
+class Tag extends Model {}
+
 Tag.init({
-    name: {
-        type: DataTypes.STRING(45),
-        allowNull: true // Permite valores nulos
-    }
+  id: {
+    type: DataTypes.INTEGER,
+    primaryKey: true,
+    autoIncrement: true
+  },
+  name: {
+    type: DataTypes.STRING,
+    allowNull: false
+  }
 }, {
-    sequelize, // Conexão passada para a classe
-    modelName: 'Tag', // Nome do modelo
-    tableName: 'tags', // Nome da tabela
-    timestamps: false // desabilita os timestamps `createAt` e `updateAt`
+  sequelize,
+  modelName: 'Tag'
 });
 
 module.exports = Tag;
