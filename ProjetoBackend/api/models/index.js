@@ -1,25 +1,20 @@
-// models/index.js
+const Comment = require('./Comment');
 
-const Post = require('./Post');
-const Tag = require('./Tag');
-const User = require('./User');
-const Profile = require('./Profile');
-const PostTag = require('./PostTag');
+// Relacionamentos de comentários
+User.hasMany(Comment, { foreignKey: 'userId' });
+Comment.belongsTo(User, { foreignKey: 'userId' });
 
-// Relacionamentos existentes
-User.hasOne(Profile, { foreignKey: 'userId' });
-Profile.belongsTo(User, { foreignKey: 'userId' });
-User.hasMany(Post, { foreignKey: 'userId' });
-Post.belongsTo(User, { foreignKey: 'userId' });
+Post.hasMany(Comment, { foreignKey: 'postId' });
+Comment.belongsTo(Post, { foreignKey: 'postId' });
 
-// Relacionamento muitos-para-muitos
-Post.belongsToMany(Tag, { through: PostTag, foreignKey: 'postId' });
-Tag.belongsToMany(Post, { through: PostTag, foreignKey: 'tagId' });
+Comment.hasMany(Comment, { as: 'Replies', foreignKey: 'parentId' });
+Comment.belongsTo(Comment, { as: 'Parent', foreignKey: 'parentId' });
 
 module.exports = {
+  User,
   Post,
   Tag,
-  User,
   Profile,
-  PostTag
+  PostTag,
+  Comment
 };

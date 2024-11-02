@@ -3,6 +3,10 @@ const UsuariosRotas = require('./UsuariosRotas');
 const PostsRotas = require('./PostRotas');
 const jwt = require('jsonwebtoken')
 require('dotenv').config()
+const commentsRoutes = require('./commentsRoutes');
+
+// Adicionando rotas de comentários
+app.use('/comments', commentsRoutes);
 
 const RotasPrivadas = express.Router();
 
