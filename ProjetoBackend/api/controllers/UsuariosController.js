@@ -1,24 +1,26 @@
+const MD5 = require('crypto-js/md5')
 const { User, Profile } = require("../models")
 
-exports.list = async (req, res) => {
-    try {
+class UsuariosController{
+
+    
+    async list(req, res){
         const users = await User.findAll({
             include: [Profile]
         });
-        res.json(users);
-    } catch (error) {
-        res.status(500).json({ error: error.message });
-    }
-};
-
-// Criar usuário com perfil
-exports.create = async (req, res) => {
-    try {
-        const user = await User.create(req.body, {
-            include: [Profile]
+        return res.json(users);
+    };
+    
+    // Criar usuário com perfil
+    create(req, res){
+        const body = req.body;
+        const password = MD5(body.password).toString()
+        body.password = password;
+        User.create(body, {include: Profile});
+        return res.status(201).json({
+            message: "Usuario cadastrado com sucesso"
         });
-        res.status(201).json(user);
-    } catch (error) {
-        res.status(500).json({ error: error.message});        
     }
 }
+
+module.exports = UsuariosController;
